@@ -1,5 +1,6 @@
 package com.wold.homepage;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +8,7 @@ import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -80,7 +82,15 @@ public class MainHome extends JFrame {
 						label4.setText("正交表中没有此规则！");
 						area2.setText("");
 						area3.setText("");
+						label5.setText("");
 					}
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "输入不能为空", "警告", JOptionPane.WARNING_MESSAGE);
+					label4.setText("");
+					area2.setText("");
+					area3.setText("");
+					label5.setText("");
 				}
 			}
 		});
@@ -92,8 +102,9 @@ public class MainHome extends JFrame {
 	public void setJPanel(JPanel panel) {
 		panel.setLayout(null);// 设置绝对布局
 		// label1显示输入提示
-		JLabel label1 = new JLabel("使用:分开因子和水平，使用,分开各水平");
+		JLabel label1 = new JLabel("输入时注意使用:分开因子和水平，使用,分开各水平(均为英文符号)");
 		label1.setFont(new Font("宋体", Font.BOLD, 16));
+		label1.setForeground(Color.red);
 		label1.setBounds(10, 0, 800, 30);
 		panel.add(label1);
 

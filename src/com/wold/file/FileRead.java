@@ -29,7 +29,7 @@ public class FileRead {
 	 * @throws IOException
 	 */
 	public void query(String str) throws IOException {
-		String regex = ".*" + str.toString() + "\\s+n.*";
+		String regex =str.toString() + "\\s+n.*";// ".*" + 
 		BufferedReader br = new BufferedReader(new FileReader("1.txt"));
 		String next = null;
 		have = false;
